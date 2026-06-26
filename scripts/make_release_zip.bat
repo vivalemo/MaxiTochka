@@ -1,28 +1,23 @@
 @echo off
-chcp 65001 >nul
 cd /d "%~dp0.."
 
-if not exist "dist\Maxitochka\Maxitochka.exe" (
-    echo Сначала выполните build.bat
-    pause
-    exit /b 1
-)
+if not exist "dist\Maxitochka\Maxitochka.exe" goto nobuild
 
-for /f "tokens=2 delims=:" %%a in ('findstr /c:"\"version\"" version.json') do (
-    set "VER=%%a"
-)
-set VER=%VER:"=%
-set VER=%VER:,=%
-set VER=%VER: =%
+set "PY=%~dp0..\.venv\Scripts\python.exe"
+if not exist "%PY%" set "PY=python"
 
-set "ZIP=dist\Maxitochka-%VER%.zip"
-if exist "%ZIP%" del /f /q "%ZIP%"
+"%PY%" "%~dp0make_release_zip.py"
+if errorlevel 1 goto fail
 
-powershell -NoProfile -Command "Compress-Archive -Path 'dist\Maxitochka\*' -DestinationPath '%ZIP%' -Force"
-if errorlevel 1 exit /b 1
-
-echo.
-echo Готово: %ZIP%
-echo Загрузите этот файл в GitHub Releases и обновите url в version.json
 echo.
 pause
+exit /b 0
+
+:nobuild
+echo Run build.bat first.
+pause
+exit /b 1
+
+:fail
+pause
+exit /b 1
