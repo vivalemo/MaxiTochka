@@ -1,0 +1,49 @@
+# Python / venv
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Сборка
+build/
+dist/
+dist */
+*.spec.bak
+
+# Данные пользователя (не в git!)
+profiles/
+tokenbase/
+sessions/
+proxies.txt
+*.log
+logs/
+
+# Секреты
+.env
+*.pem
+credentials*
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+
+# Временные тесты / артефакты
+scripts/unit_report.json
+scripts/media_proxy_report.json
+scripts/bypass_diag_report.json
+scripts/image_nav_report.json
+scripts/real_media_report.json
+scripts/result.json
+scripts/test_results/
+scripts/test_data/
+scripts/*.png
+profiles/_diag_*
+profiles/_test_*
+
+# Большие артефакты (runtime копируется при build)
+# DotLauncher.exe_extracted оставляем — нужен для dev/build

@@ -1,0 +1,12 @@
+PyQt6>=6.6
+requests>=2.31
+setuptools>=69.0,<70
+playwright>=1.49
+selenium-wire>=5.1
+blinker==1.6.3
+pyOpenSSL>=23.2.0
+websockets>=14.0,<17
+python-socks[asyncio]>=2.4.0
+PySocks>=1.7.1
+cryptography>=42.0
+tzdata>=2024.1

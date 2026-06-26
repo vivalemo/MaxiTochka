@@ -1,0 +1,49 @@
+
+QMainWindow { background: transparent; }
+QFrame#MainContainer {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+QWidget { background: transparent; border: none; }
+QLabel { color: #FFFFFF; font-family: 'Segoe UI'; font-weight: 900; font-style: italic; font-size: 15px; }
+QLabel#Header { font-size: 28px; letter-spacing: 5px; }
+QTextEdit {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    font-family: 'Consolas';
+    font-weight: 900; font-style: italic; font-size: 14px;
+}
+QLineEdit {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+    padding: 8px;
+    font-weight: 900;
+}
+QPushButton#NavBtn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px; font-weight: 900; font-style: italic;
+    border: none; padding: 10px;
+}
+QPushButton#NavBtn:checked { color: #FFFFFF; border-bottom: 2px solid #FFFFFF; }
+QPushButton#GhostBtn {
+    background: transparent; color: #FFFFFF;
+    border: 2px solid #FFFFFF; font-weight: 900; font-style: italic; height: 38px;
+}
+QPushButton#GhostBtn:hover { background: rgba(255, 255, 255, 0.1); }
+QPushButton#CyanBtn {
+    background: transparent; color: #40E0D0;
+    border: 2px solid #40E0D0; font-weight: 900; font-style: italic; height: 38px;
+}
+QPushButton#CyanBtn:hover { background: rgba(255, 255, 255, 0.1); }
+QFrame#ProxyItem, QFrame#SessionItem {
+    background: transparent; border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+QFrame#Toast { background: rgba(0, 0, 0, 0.9); border: 1px solid #FFFFFF; border-radius: 2px; }
+QScrollArea { border: none; background: transparent; }
+QScrollBar:vertical { background: transparent; width: 2px; }
+QScrollBar::handle:vertical { background: #FFFFFF; }
