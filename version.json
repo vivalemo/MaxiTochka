@@ -1,7 +1,7 @@
 {
-  "version": "1.2.23",
+  "version": "1.2.24",
   "build": "2026-06-30",
   "update_url": "https://raw.githubusercontent.com/vivalemo/MaxiTochka/main/version.json",
-  "url": "https://github.com/vivalemo/MaxiTochka/releases/download/v1.2.23/Maxitochka.zip",
+  "url": "https://github.com/vivalemo/MaxiTochka/releases/download/v1.2.24/Maxitochka.zip",
   "notes": "Автообновление, переключатель Selenium/Playwright, исправления CRM."
 }
